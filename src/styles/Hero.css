@@ -1,0 +1,131 @@
+.hero{
+text-align:center;
+min-height:86vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding-top:40px;
+}
+
+.hero-tag{
+padding:8px 16px;
+border-radius:999px;
+font-size:0.95rem;
+font-weight:700;
+letter-spacing:0.8px;
+text-transform:uppercase;
+color:#67e8f9;
+background:rgba(8,47,73,0.45);
+border:1px solid rgba(103,232,249,0.35);
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(2.8rem,8vw,5.4rem);
+line-height:1.1;
+background:linear-gradient(90deg,#67e8f9,#38bdf8 40%,#818cf8);
+-webkit-background-clip:text;
+color:transparent;
+text-shadow:0 0 20px rgba(56,189,248,0.3);
+}
+
+.hero h2{
+margin-top:18px;
+font-size:clamp(1.25rem,3vw,2rem);
+color:#94a3b8;
+font-weight:600;
+max-width:900px;
+}
+
+.hero-summary{
+margin-top:24px;
+max-width:760px;
+font-size:1.28rem;
+line-height:1.8;
+color:#cbd5e1;
+}
+
+.hero-stats{
+margin-top:30px;
+display:grid;
+grid-template-columns:repeat(3,minmax(160px,1fr));
+gap:14px;
+width:min(760px,100%);
+}
+
+.hero-stat{
+padding:18px 14px;
+border-radius:14px;
+background:rgba(15,23,42,0.65);
+border:1px solid rgba(148,163,184,0.25);
+}
+
+.hero-stat h3{
+font-size:1.6rem;
+color:#22d3ee;
+margin-bottom:2px;
+}
+
+.hero-stat p{
+font-size:0.98rem;
+color:#cbd5e1;
+}
+
+.hero-actions{
+margin-top:30px;
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 38px;
+border:none;
+border-radius:999px;
+background:linear-gradient(90deg,#22d3ee,#3b82f6);
+color:white;
+font-size:1.2rem;
+font-weight:700;
+text-decoration:none;
+letter-spacing:0.5px;
+cursor:pointer;
+box-shadow:0 12px 28px rgba(14,116,144,0.35);
+transition:transform 0.25s ease,box-shadow 0.25s ease;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 16px 32px rgba(56,189,248,0.35);
+}
+
+.hero-btn-secondary{
+background:transparent;
+border:1px solid rgba(103,232,249,0.45);
+color:#67e8f9;
+box-shadow:none;
+}
+
+.hero-btn-secondary:hover{
+box-shadow:0 12px 28px rgba(8,47,73,0.45);
+}
+
+@media (max-width:900px){
+.hero-summary{
+font-size:1.15rem;
+}
+
+.hero-stats{
+grid-template-columns:1fr;
+max-width:420px;
+}
+
+.hero-btn{
+font-size:1.05rem;
+padding:14px 30px;
+}
+}

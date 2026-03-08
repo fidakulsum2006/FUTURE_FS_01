@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.app-shell{
+position:relative;
+min-height:100vh;
+overflow-x:hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-content{
+position:relative;
+z-index:2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sparkle-field{
+position:fixed;
+inset:0;
+z-index:1;
+pointer-events:none;
+opacity:0.65;
+background:
+radial-gradient(circle at 12% 18%,rgba(56,189,248,0.85) 0 1px,transparent 2px),
+radial-gradient(circle at 84% 26%,rgba(34,211,238,0.7) 0 1.5px,transparent 2.8px),
+radial-gradient(circle at 68% 82%,rgba(125,211,252,0.75) 0 1px,transparent 2.5px),
+radial-gradient(circle at 22% 76%,rgba(99,102,241,0.7) 0 1px,transparent 2.5px);
+background-size:280px 280px,360px 360px,420px 420px,300px 300px;
+animation:sparkleDrift 8s linear infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sparkle-field::before,
+.sparkle-field::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle,rgba(186,230,253,0.9) 0 1px,transparent 2px) 40px 120px/260px 260px,
+radial-gradient(circle,rgba(255,255,255,0.8) 0 1px,transparent 2px) 160px 30px/300px 300px;
+animation:sparkleTwinkle 1.8s ease-in-out infinite alternate;
 }
 
-.App-link {
-  color: #61dafb;
+.sparkle-field::after{
+animation-delay:1.2s;
+opacity:0.55;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes sparkleDrift{
+from{transform:translateY(0);}
+to{transform:translateY(-180px);}
+}
+
+@keyframes sparkleTwinkle{
+from{opacity:0.2;}
+to{opacity:0.8;}
 }
