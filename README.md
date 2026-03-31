@@ -2,6 +2,8 @@
 
 A personal portfolio website built with React to showcase profile, skills, and selected projects.
 
+Live site: [future-fs-01-tau-taupe.vercel.app](https://future-fs-01-tau-taupe.vercel.app)
+
 ## Overview
 
 This project includes:
@@ -85,6 +87,8 @@ Open `http://localhost:3000` in your browser.
 - Update overall reveal behavior: `src/App.js`
 
 ## Deployment
+
+Production URL: [https://future-fs-01-tau-taupe.vercel.app](https://future-fs-01-tau-taupe.vercel.app)
 
 Build the production bundle:
 
